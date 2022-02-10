@@ -2,7 +2,7 @@
 ## torch.nn.LSTM()
 - [官方文档](https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html?highlight=lstm#torch.nn.LSTM)
 - 普通单向lstm
-```
+```python
 rnn = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)
 input = torch.randn(5, 3, 10)
 h0 = torch.randn(2, 3, 20)
@@ -15,7 +15,7 @@ print(cn.size()) # torch.Size([2, 3, 20])
 ```
 
 - 双向lstm
-```
+```python
 rnn = nn.LSTM(input_size=10, hidden_size=20, num_layers=2, bidirectional=True)
 input = torch.randn(5, 3, 10)
 h0 = torch.randn(2*2, 3, 20)
@@ -40,7 +40,7 @@ print(cn.size()) # torch.Size([4, 3, 20])
 - 单个时间步的lstm
 - [官方文档](https://pytorch.org/docs/stable/generated/torch.nn.LSTMCell.html?highlight=nn%20lstmcell#torch.nn.LSTMCell)
 
-```
+```python
 rnn = nn.LSTMCell(10, 20) # (input_size, hidden_size)
 
 input = torch.randn(2, 3, 10) # (time_steps, batch, input_size)
